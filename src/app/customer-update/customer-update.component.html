@@ -1,0 +1,42 @@
+<form [formGroup]="UpdateCustomer" (ngSubmit)="Update()">
+    <div class="form-group">
+        <input  class="form-control my-2" class="form-control my-2" type="hidden" formControlName="CustomerId" >
+
+    </div>
+    <div class="form-group">
+        <label>First Name</label>
+        <input  class="form-control my-2" class="form-control my-2" type="text" formControlName="CustomerFirstName" >
+        <span *ngIf="UpdateCustomer.controls.CustomerFirstName.invalid&&UpdateCustomer.controls.CustomerFirstName.touched"  class="text-danger">Required!</span>
+
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input  class="form-control my-2" class="form-control my-2" type="text"  formControlName="CustomerLastName">
+        <span *ngIf="UpdateCustomer.controls.CustomerLastName.invalid&&UpdateCustomer.controls.CustomerLastName.touched"  class="text-danger">Required!</span>
+
+    </div>
+    <div class="form-group">
+        <label>Customer Email</label>
+        <input  class="form-control my-2" class="form-control my-2" type="text" formControlName="CustomerEmail">
+        <span *ngIf="UpdateCustomer.controls.CustomerEmail.invalid&&UpdateCustomer.controls.CustomerEmail.touched" class="text-danger">Required!</span>
+
+    </div>
+    <div class="form-group">
+        <label>Customer Data of Birth</label>
+        <input  class="form-control my-2" class="form-control my-2" type="date"   formControlName="CustomerDOB">
+        <span *ngIf="UpdateCustomer.controls.CustomerDOB.invalid&&UpdateCustomer.controls.CustomerDOB.touched" class="text-danger">Required!</span>
+
+    </div>
+
+    <div class="form-group mt-3">
+        <label >Gender</label>
+        <select  formControlName="CustomerGender" >
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select>
+        <span *ngIf="UpdateCustomer.controls.CustomerGender.invalid&&UpdateCustomer.controls.CustomerGender.touched" class="text-danger">Required!</span>
+    </div>
+
+
+    <button  class="btn btn-primary my-2 mt-3" type="submit">Update</button>
+</form>

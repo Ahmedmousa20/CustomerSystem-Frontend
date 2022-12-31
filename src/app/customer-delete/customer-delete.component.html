@@ -1,0 +1,36 @@
+<form [formGroup]="DeleteCustomer" (ngSubmit)="Delete()">
+    <div class="form-group">
+        <input  class="form-control my-2" class="form-control my-2" type="hidden" formControlName="CustomerId" >
+
+    </div>
+    <div class="form-group">
+        <label>First Name</label>
+        <input  class="form-control my-2" class="form-control my-2" type="text" formControlName="CustomerFirstName" >
+
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input  class="form-control my-2" class="form-control my-2" type="text"  formControlName="CustomerLastName">
+
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input  class="form-control my-2" class="form-control my-2" type="text" formControlName="CustomerEmail">
+
+    </div>
+    <div class="form-group">
+        <label>Data of Birth</label>
+        <input  class="form-control my-2" class="form-control my-2" type="text"   formControlName="CustomerDOB">
+
+    </div>
+
+    <div class="form-group mt-3">
+        <label >Gender</label>
+        <input  class="form-control my-2" class="form-control my-2" type="text"   formControlName="CustomerGender" >
+
+    </div>
+
+
+    <button  class="btn btn-danger my-2 mt-3" type="submit">Delete</button>
+</form>
+

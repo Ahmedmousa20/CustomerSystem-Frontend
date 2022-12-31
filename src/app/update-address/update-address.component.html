@@ -1,0 +1,19 @@
+<form [formGroup]="UpdateAddress" (ngSubmit)="Update()">
+    <div class="form-group">
+        <input  class="form-control my-2" class="form-control my-2" type="hidden" formControlName="Id" >
+    </div>
+    <div class="form-group">
+        <input  class="form-control my-2" class="form-control my-2" type="hidden" formControlName="CustomerId" >
+    </div>
+    <div class="form-group">
+        <label>Address</label>
+        <input  class="form-control my-2" class="form-control my-2" type="text"  formControlName="CustomerAddress">
+        <span *ngIf="UpdateAddress.controls.CustomerAddress.invalid&&UpdateAddress.controls.CustomerAddress.touched"  class="text-danger">2-5 numbers - 2-5 characters - 2-5 characters - 2-5 characters</span>
+        <br>
+        <span *ngIf="UpdateAddress.controls.CustomerAddress.invalid&&UpdateAddress.controls.CustomerAddress.touched"  class="text-danger">Like 12-str-stre-str</span>
+
+    </div>
+
+    <button  class="btn btn-primary my-2 mt-3" type="submit">Update</button>
+</form>
+

@@ -1,0 +1,24 @@
+<input [(ngModel)]="term"  placeholder="search by Customer Id..." type="text" class="form-control w-50 m-auto bg-transparent">
+
+<a class="btn btn-primary mb-5 mt-5" routerLink="/AddressCreate">Create New Address</a>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Customer Id</th>
+        <th scope="col">Customer Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Address of CustomersAddress|search:term">
+        <th scope="row">{{Address.Id}}</th>
+        <td>{{Address.CustomerId}}</td>
+        <td>{{Address.CustomerAddress}}</td>
+     
+        <td><a class="btn btn-primary" routerLink="/AddressUpdate/{{Address.CustomerId}}">Update</a></td>
+        <td><a class="btn btn-danger" routerLink="/AddressDelete/{{Address.CustomerId}}">Delete</a></td>
+      </tr>
+      
+    </tbody>
+  </table>

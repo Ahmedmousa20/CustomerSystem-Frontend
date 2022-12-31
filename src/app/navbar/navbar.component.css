@@ -1,0 +1,14 @@
+.collapse {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
+  background-color: #09c;
+}
+.navbar .nav-link {
+  color: #fff;
+}
+.navbar i {
+  margin: 10px;
+}/*# sourceMappingURL=navbar.component.css.map */

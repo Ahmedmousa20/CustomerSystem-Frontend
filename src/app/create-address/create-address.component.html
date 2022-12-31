@@ -1,0 +1,27 @@
+<form [formGroup]="CreateAddress" (ngSubmit)="Create()">
+
+    <div class="form-group">
+        <label>Address</label>
+        <input  [class.is-invalid]="CreateAddress.controls.CustomerAddress.invalid&&CreateAddress.controls.CustomerAddress.touched" class="form-control my-2" class="form-control my-2" type="text" formControlName="CustomerAddress" >
+        <span *ngIf="CreateAddress.controls.CustomerAddress.invalid&&CreateAddress.controls.CustomerAddress.touched"  class="text-danger">2-5 numbers - 2-5 characters - 2-5 characters - 2-5 characters</span>
+        <br>
+        <span *ngIf="CreateAddress.controls.CustomerAddress.invalid&&CreateAddress.controls.CustomerAddress.touched"  class="text-danger">Like 12-str-stre-str</span>
+
+    </div>
+
+
+    <div class="form-group mt-3">
+        <label >Customer Id</label>
+        <select  formControlName="CustomerId" >
+            <option *ngFor="let customer of customers" value="{{customer.CustomerId}}">{{customer.CustomerId}}</option>
+
+            
+        </select>
+        <span *ngIf="CreateAddress.controls.CustomerId.invalid&&CreateAddress.controls.CustomerId.touched" class="text-danger">Required!</span>
+    </div>
+
+
+    <button  class="btn btn-primary my-2 mt-3" type="submit">Create</button>
+</form>
+
+
