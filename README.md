@@ -8,6 +8,4 @@ Tools And Technologies:
 - Html5 , Css3 , TypeScript ,Bootstrap5
 - Angular 14 
 
-For Running:
-- Clone our Repo And Open It
-- Run npm install Command in your Terminal
+
