@@ -1,6 +1,6 @@
 # CustomerSystem
 
-Its A FrontEnd Application For my Customer System
+Its A FrontEnd Application For Handling Customers
 
 visit BackEnd Code Here : https://github.com/Ahmedmousa20/CustomerSystem-BackEnd
 
